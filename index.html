@@ -2,30 +2,34 @@
 <html lang="es">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PWA CAMARA</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PWA CAMARA</title>
 
-    <base href="/pwa-camara/">
-    <link rel="manifest" href="manifest.json">
-    <link rel="stylesheet" href="styles/main.css">
-
+  <base href="/pwa-camara/">
+  <link rel="manifest" href="manifest.json">
+  <link rel="stylesheet" href="styles/main.css">
 </head>
 
 <body>
-    <h1>Capturar Foto con Cámara</h1>
+  <h1>Capturar Foto con Cámara</h1>
 
+  <div class="button-row">
     <button id="openCamera">Abrir Cámara</button>
+    <button id="switchCamera">Cambiar Cámara</button>
+    <button id="clearGallery">Limpiar Galería</button>
+  </div>
 
-    <div id="cameraContainer">
-        <video id="video" autoplay playsinline width="320" height="240"></video>
-        <br>
-        <button id="takePhoto">Tomar Foto</button>
-        <canvas id="canvas" width="320" height="240"></canvas>
-    </div>
+  <div id="cameraContainer">
+    <video id="video" autoplay playsinline></video><br>
+    <button id="takePhoto">Tomar Foto</button>
+    <canvas id="canvas"></canvas>
+  </div>
 
-    <script src="main.js"></script>
-    <script src="app.js"></script>
+  <div id="gallery"></div>
+
+  <script src="app.js"></script>
+  <script src="main.js"></script>
 </body>
 
 </html>
